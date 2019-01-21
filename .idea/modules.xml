@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/hadoopStudy.iml" filepath="$PROJECT_DIR$/hadoopStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hadoop-HDFS-API/hadoop-HDFS-API.iml" filepath="$PROJECT_DIR$/hadoop-HDFS-API/hadoop-HDFS-API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hadoop-MapReduce-API/hadoop-MapReduce-API.iml" filepath="$PROJECT_DIR$/hadoop-MapReduce-API/hadoop-MapReduce-API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hadoopAction.iml" filepath="$PROJECT_DIR$/hadoopAction.iml" />
     </modules>
   </component>
 </project>

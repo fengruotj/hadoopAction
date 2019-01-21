@@ -5,13 +5,18 @@
   <groupId>com.basic</groupId>
   <artifactId>hadoopStudy</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <modules>
+    <module>hadoop-HDFS-API</module>
+    <module>hadoop-MapReduce-API</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>hadoopStudy</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <hadoop.version>2.9.2</hadoop.version>
   </properties>
 
   <dependencies>
@@ -24,32 +29,32 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-minicluster</artifactId>
-      <version>2.6.2</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-client</artifactId>
-      <version>2.6.2</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-assemblies</artifactId>
-      <version>2.6.2</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-maven-plugins</artifactId>
-      <version>2.6.2</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-common</artifactId>
-      <version>2.6.2</version>
+      <version>${hadoop.version}</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-hdfs</artifactId>
-      <version>2.6.2</version>
+      <version>${hadoop.version}</version>
     </dependency>
   </dependencies>
 
