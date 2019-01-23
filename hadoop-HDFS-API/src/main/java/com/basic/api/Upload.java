@@ -1,5 +1,6 @@
 package com.basic.api;
 
+import com.basic.common.Constant;
 import org.apache.commons.io.FileUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataOutputStream;
@@ -15,11 +16,12 @@ import java.io.IOException;
  */
 public class Upload {
     public static void main(String[] args) throws IOException {
-        Configuration configuration=new Configuration();
-        FileSystem fileSystem = FileSystem.get(configuration);
+        Configuration conf=new Configuration();
+        FileSystem.setDefaultUri(conf, Constant.HADOOP_URL);
+        FileSystem fileSystem = FileSystem.get(conf);
 
-        FSDataOutputStream fsDataOutputStream = fileSystem.create(new Path("tmp/test"));
-        FileUtils.copyFile(new File("data/test.text"), fsDataOutputStream);
+        FSDataOutputStream fsDataOutputStream = fileSystem.create(new Path("/user/root/hadoop/input/wc"));
+        FileUtils.copyFile(new File("data/wc"), fsDataOutputStream);
         fileSystem.close();
     }
 }
